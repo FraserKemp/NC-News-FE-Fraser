@@ -44,13 +44,13 @@ export default class ArticlePostForm extends Component {
             </div>
           </label>
           <br />
-          <label>
+          <label className="select-style">
             <select
               required={true}
               onChange={this.updateTopicInput}
-              name="topics"
-              id="topic-options"
+              className="topic-dropdown"
             >
+              <option>Choose here:</option>
               {topics.map((topic, i) => {
                 return (
                   <GetTopicOptions key={`topicOption${i}`} topic={topic} />
