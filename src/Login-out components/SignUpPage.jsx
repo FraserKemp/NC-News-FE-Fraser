@@ -20,7 +20,7 @@ export default class SignUpPage extends Component {
               <i className="far fa-user" />
               <input
                 required={true}
-                onChange={this.updateUsernameInput}
+                onChange={e => this.handleChange('username', e)}
                 type="text"
                 placeholder="Username"
               />
@@ -30,7 +30,7 @@ export default class SignUpPage extends Component {
             <div id="sign-up-textbox">
               <input
                 required={true}
-                onChange={this.updateNameInput}
+                onChange={e => this.handleChange('name', e)}
                 type="text"
                 placeholder="Name"
               />
@@ -40,7 +40,7 @@ export default class SignUpPage extends Component {
             <div id="sign-up-textbox">
               <input
                 required={true}
-                onChange={this.updateAvatar_url}
+                onChange={e => this.handleChange('avatar_url', e)}
                 type="text"
                 placeholder="Avatar_Url"
               />
@@ -70,15 +70,7 @@ export default class SignUpPage extends Component {
       });
   };
 
-  updateUsernameInput = e => {
-    this.setState({ username: e.target.value });
-  };
-
-  updateNameInput = e => {
-    this.setState({ name: e.target.value });
-  };
-
-  updateAvatar_url = e => {
-    this.setState({ avatar_url: e.target.value });
+  handleChange = (stateToChange, e) => {
+    this.setState({ [stateToChange]: e.target.value });
   };
 }
