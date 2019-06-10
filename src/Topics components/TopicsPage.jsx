@@ -14,7 +14,6 @@ class TopicsPage extends Component {
   };
 
   componentDidMount() {
-    console.log('mounted...');
     getTopics()
       .then(topics => {
         this.setState({ topics });
@@ -61,7 +60,7 @@ class TopicsPage extends Component {
                 <div id="textbox">
                   <input
                     required={true}
-                    onChange={this.updateSlugInput}
+                    onChange={e => this.handleChange('slug', e)}
                     type="text"
                     name="slug"
                     placeholder="Topic name"
@@ -73,7 +72,7 @@ class TopicsPage extends Component {
                 <div id="textbox">
                   <input
                     required={true}
-                    onChange={this.updateDescriptionInput}
+                    onChange={e => this.handleChange('description', e)}
                     type="text"
                     name="description"
                     placeholder="Description"
@@ -93,12 +92,8 @@ class TopicsPage extends Component {
     this.setState({ button: newBool });
   }
 
-  updateSlugInput = e => {
-    this.setState({ slug: e.target.value });
-  };
-
-  updateDescriptionInput = e => {
-    this.setState({ description: e.target.value });
+  handleChange = (stateToChange, e) => {
+    this.setState({ [stateToChange]: e.target.value });
   };
 
   handleSubmit = e => {
