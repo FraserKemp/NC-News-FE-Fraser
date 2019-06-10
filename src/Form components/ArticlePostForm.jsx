@@ -21,7 +21,7 @@ export default class ArticlePostForm extends Component {
           className="aricle-form-body"
         >
           <label>
-            <div id="article-textbox">
+            <div className="article-textbox">
               <input
                 required={true}
                 onChange={this.updateTitleInput}
@@ -33,7 +33,7 @@ export default class ArticlePostForm extends Component {
           </label>
           <br />
           <label>
-            <div id="article-textbox">
+            <div className="article-textbox">
               <textarea
                 required={true}
                 onChange={this.updateBodyInput}
@@ -59,7 +59,7 @@ export default class ArticlePostForm extends Component {
             </select>
           </label>
           <br />
-          <button id="post-article-btn2">Post Article</button>
+          <button className="post-article-btn2">Post Article</button>
         </form>
       </div>
     );

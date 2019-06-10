@@ -10,11 +10,54 @@
   font-family: 'Raleway', sans-serif;
 }
 
-#article-textbox {
+.article-textbox {
   width: 100%;
   overflow: hidden;
   font-size: 20px;
   padding: 8px 0;
   margin: 8px 0;
   border-bottom: 1px solid black;
+}
+
+.article-textbox input {
+  border: none;
+  outline: none;
+  background: none;
+  color: black;
+  font-size: 18px;
+  width: 80%;
+  margin: 0 10px;
+}
+
+.article-textbox textarea {
+  border: none;
+  outline: none;
+  background: none;
+  overflow: visible;
+  color: black;
+  font-size: 18px;
+  height: 200px;
+  width: 80%;
+  margin: 0 10px;
+}
+
+.post-article-btn2 {
+  font-weight: bold;
+  border-radius: 10px;
+  width: 30%;
+  background: none;
+  border: none;
+  border-bottom: white;
+  padding: 5px;
+  font-size: 23px;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+  transition: 0.4s;
+  margin: 12px 0;
+}
+
+.post-article-btn2:hover {
+  background-color: #e74c3c;
+  color: white;
+  border-bottom: black;
 }
