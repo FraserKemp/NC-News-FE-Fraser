@@ -14,7 +14,7 @@ h1#article-title {
 }
 
 .comment-btn {
-  width: 8%;
+  width: 3em;
   background: none;
   border: none;
   background-color: white;
@@ -23,7 +23,7 @@ h1#article-title {
   font-family: 'Raleway', sans-serif;
   cursor: pointer;
   transition: 0.4s;
-  margin: 12px 0;
+  margin: 12px;
   border-radius: 10px;
 }
 
@@ -41,7 +41,6 @@ h1#article-title {
 #new-comment-btn {
   font-weight: bold;
   border-radius: 10px;
-  width: 20%;
   background: none;
   border: none;
   border-bottom: white;
@@ -109,4 +108,20 @@ h1#article-title {
   border-style: none;
   border-width: none;
   padding: 20px;
+}
+
+.comment-textarea {
+  width: 100%;
+  overflow: hidden;
+  font-size: 20px;
+  padding: 0 0;
+  margin: 0 0;
+  border-bottom: 1px solid black;
+}
+
+.text-area {
+  border: none;
+  margin: 0px;
+  height: 56px;
+  width: 257px;
 }

@@ -122,8 +122,9 @@ class SingleArticle extends Component {
                   </label>
                   <br />
                   <label>
-                    <div id="comment-textbox">
+                    <div className="comment-textarea">
                       <textarea
+                        className="text-area"
                         required={true}
                         onChange={this.updateCommentBody}
                         type="text"

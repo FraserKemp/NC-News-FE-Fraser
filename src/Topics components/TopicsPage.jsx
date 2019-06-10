@@ -56,7 +56,7 @@ class TopicsPage extends Component {
         )}
         <div className="new-topic-box">
           {button && (
-            <form className="form-body" onSubmit={this.handleSubmit}>
+            <form className="login-form-body" onSubmit={this.handleSubmit}>
               <label>
                 <div id="textbox">
                   <input

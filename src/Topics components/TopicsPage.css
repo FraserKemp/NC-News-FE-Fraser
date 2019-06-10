@@ -53,6 +53,8 @@
 
 .new-topic-box {
   width: 280px;
+  text-align: center;
+  /* display: inline-block; */
 }
 
 .login-box h1 {
@@ -118,7 +120,10 @@ button:focus {
   margin: 12px 0;
 }
 
-.form-body {
+.login-form-body {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
