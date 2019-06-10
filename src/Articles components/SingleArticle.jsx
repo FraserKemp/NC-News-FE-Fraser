@@ -105,7 +105,7 @@ class SingleArticle extends Component {
                 Add Comment
               </button>
             )}
-            {button && (
+            {user && button && (
               <div className="comment-login-box">
                 <h1>Post Comment</h1>
                 <form

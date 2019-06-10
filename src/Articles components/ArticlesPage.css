@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:100&display=swap');
 
+@media only screen and (max-width: 768px) {
+  #container {
+    flex-grow: 0;
+    flex-basis: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+    padding: 5px;
+    margin: 0;
+  }
+
+  #container-items {
+    flex-grow: 0;
+    width: 20em;
+    background-color: none;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #e74c3c;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
 h4,
 h1 {
   font-family: 'Raleway', sans-serif;
@@ -28,6 +55,7 @@ a {
 #container-items {
   flex-grow: 1;
   flex-basis: 25%;
+  /* width: 20em; */
   background-color: none;
   margin: 10px;
   padding: 10px;

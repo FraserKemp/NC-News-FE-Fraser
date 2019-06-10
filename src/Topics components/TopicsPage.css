@@ -3,6 +3,8 @@
 @media only screen and (max-width: 768px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android)*/
   #topics-container {
+    flex-grow: 0;
+    flex-basis: 80%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -22,8 +24,7 @@
 }
 
 #topics-container-items {
-  flex-grow: 1;
-  flex-basis: 20%;
+  width: 20em;
   background-color: none;
   margin: 10px;
   padding: 10px;
