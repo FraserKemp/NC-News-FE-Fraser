@@ -50,8 +50,8 @@ export default class SingleTopic extends Component {
             <h1>Topic: {topic.slug}</h1>
             <p>{topic.description}</p>
           </ul>
+          <h1 id="r-a-title">Related articles: </h1>
           <ul id="r-a-container">
-            <h1 id="r-a-title">Related articles: </h1>
             {relatedArticles.map(article => {
               return (
                 <ArticleList

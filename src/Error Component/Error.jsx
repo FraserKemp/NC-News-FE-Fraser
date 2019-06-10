@@ -2,7 +2,7 @@ import React from 'react';
 
 const Error = props => {
   const { err } = props;
-  if (!err) return <h2>Something went wrong...</h2>;
+  if (!err) return <h2>404 - Page Not Found</h2>;
   return (
     <div>
       <h2 className="Error">{err.errStatus}</h2>

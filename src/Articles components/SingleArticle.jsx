@@ -21,7 +21,6 @@ class SingleArticle extends Component {
   };
 
   componentDidMount() {
-    console.log('mounted ... ');
     const { article_id } = this.props;
     getArticleById(article_id)
       .then(article => {

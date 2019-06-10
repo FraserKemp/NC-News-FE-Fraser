@@ -3,8 +3,13 @@
 }
 
 #r-a-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+  padding: 5px;
   margin: 0;
-  padding: 0;
 }
 
 #container-items a {

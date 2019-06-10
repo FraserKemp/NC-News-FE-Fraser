@@ -7,7 +7,7 @@ const Header = props => {
   return (
     <div className="header">
       <nav className="navbar">
-        <Link to="/articles" id="navbar-element">
+        <Link to="/" id="navbar-element">
           <h4>Articles</h4>
         </Link>
         <Link to="/topics" id="navbar-element">
@@ -30,17 +30,13 @@ const Header = props => {
             </div>
           )}
           {user && (
-            <Link
-              onClick={e => logOutUser(false)}
-              to="/articles"
-              id="navbar-element"
-            >
+            <Link onClick={e => logOutUser(false)} to="/" id="navbar-element">
               <h4>Logout</h4>
             </Link>
           )}
         </div>
       </nav>
-      <Link to="/articles">
+      <Link to="/">
         <h1>
           <span id="first-letter">N</span>orthcoders
           <span id="first-letter">N</span>ews

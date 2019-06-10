@@ -27,13 +27,13 @@ class App extends Component {
   logInGuest = user => {
     localStorage.setItem('user', JSON.stringify(user));
     this.setState({ user });
-    navigate(`/articles`);
+    navigate(`/`);
   };
 
   updateAppUser = user => {
     this.setState({ user });
     localStorage.setItem('user', JSON.stringify(user));
-    navigate(`/articles`);
+    navigate(`/`);
   };
 
   logOutUser = bool => {
@@ -52,7 +52,7 @@ class App extends Component {
         />
         <Router>
           <Error default />
-          <ArticlesPage user={user} path="/articles" />
+          <ArticlesPage user={user} path="/" />
           <TopicsPage user={user} path="/topics" />
           <SingleArticle user={user} path="/articles/:article_id" />
           <SingleTopic path="/topics/:topicName" />
