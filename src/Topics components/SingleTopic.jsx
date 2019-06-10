@@ -46,8 +46,8 @@ export default class SingleTopic extends Component {
     return (
       topic && (
         <div>
-          <ul id="single-topic">
-            <h1>Topic: {topic.slug}</h1>
+          <ul className="single-topic">
+            <h1 className="topic-title">Topic: {topic.slug}</h1>
             <p>{topic.description}</p>
           </ul>
           <h1 id="r-a-title">Related articles: </h1>

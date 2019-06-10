@@ -1,3 +1,6 @@
+@media only screen and (max-width: 768px) {
+}
+
 #r-a-title {
   text-decoration: underline;
 }
@@ -19,4 +22,12 @@
 
 #container-items a:hover {
   color: white;
+}
+
+.topic-title {
+  align-self: center;
+}
+
+.single-topic {
+  padding: 0;
 }

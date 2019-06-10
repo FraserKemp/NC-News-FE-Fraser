@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { deleteCommentByCommentId, patchCommentByCommentId } from '../api';
 import Error from '../Error Component/Error';
+import './CommentList.css';
 
 class CommentList extends Component {
   state = {
