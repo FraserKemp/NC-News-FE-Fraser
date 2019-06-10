@@ -92,3 +92,21 @@ h1#article-title {
   float: center;
   margin: 0 10px;
 }
+
+.upvote-btn {
+  background-color: none;
+  font-size: 20px;
+  border: none;
+  border-style: none;
+  border-width: none;
+  padding: 20px;
+}
+
+.downvote-btn {
+  background-color: none;
+  font-size: 20px;
+  border: none;
+  border-style: none;
+  border-width: none;
+  padding: 20px;
+}

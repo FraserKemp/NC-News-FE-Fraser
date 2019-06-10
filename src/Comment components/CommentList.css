@@ -1,3 +1,21 @@
 #container-items {
   align-items: center;
 }
+
+.comment-upvote-btn {
+  background-color: inherit;
+  font-size: 20px;
+  border: none;
+  border-style: none;
+  border-width: none;
+  padding: 20px;
+}
+
+.comment-downvote-btn {
+  background-color: inherit;
+  font-size: 20px;
+  border: none;
+  border-style: none;
+  border-width: none;
+  padding: 20px;
+}

@@ -7,11 +7,7 @@ class FilterButton extends Component {
   render() {
     const { showFilters } = this.state;
     return (
-      <div
-        onMouseEnter={() => this.showFilters(true)}
-        onMouseLeave={() => this.showFilters(false)}
-        className="dropdown"
-      >
+      <div onClick={() => this.showFilters(!showFilters)} className="dropdown">
         <button id="filter-btn">
           Filter <i className="fas fa-angle-down" />
         </button>

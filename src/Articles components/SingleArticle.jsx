@@ -78,7 +78,7 @@ class SingleArticle extends Component {
             <h4>Likes: {article.votes + voteChange}</h4>
             <button
               disabled={voteChange === 1}
-              id="upvote-btn"
+              className="upvote-btn"
               onClick={() => this.handleVote(article.article_id, 1)}
             >
               <span role="img" aria-label="thumbs down">
@@ -87,7 +87,7 @@ class SingleArticle extends Component {
             </button>
             <button
               disabled={voteChange === -1}
-              id="downvote-btn"
+              className="downvote-btn"
               onClick={() => this.handleVote(article.article_id, -1)}
             >
               <span role="img" aria-label="thumbs down">

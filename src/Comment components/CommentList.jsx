@@ -34,7 +34,7 @@ class CommentList extends Component {
         <h4>Likes: {commentVotes}</h4>
         <button
           disabled={voteChange === 1}
-          id="comment-upvote-btn"
+          className="comment-upvote-btn"
           onClick={() => this.handleVote(comment.comment_id, 1)}
         >
           <span role="img" aria-label="thumbs down">
@@ -43,7 +43,7 @@ class CommentList extends Component {
         </button>
         <button
           disabled={voteChange === -1}
-          id="comment-downvote-btn"
+          className="comment-downvote-btn"
           onClick={() => this.handleVote(comment.comment_id, -1)}
         >
           <span role="img" aria-label="thumbs down">
