@@ -3,12 +3,17 @@ import './Filter.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 
 class FilterButton extends Component {
-  state = { showFilters: null };
+  state = { showFilters: null, author: '' };
   render() {
-    const { showFilters } = this.state;
+    const { showFilters, author } = this.state;
     return (
-      <div onClick={() => this.showFilters(!showFilters)} className="dropdown">
-        <button id="filter-btn">
+      <div className="dropdown">
+        <button
+          onClick={() => {
+            this.showFilters(!showFilters);
+          }}
+          id="filter-btn"
+        >
           Filter <i className="fas fa-angle-down" />
         </button>
         {showFilters && (
@@ -45,11 +50,33 @@ class FilterButton extends Component {
             >
               Likes
             </button>
+            <br />
+            <button id="secondary-button" value="votes">
+              Author:
+              <input
+                onChange={this.authorInput}
+                placeholder="Valid Username"
+                className="author-input"
+              />
+            </button>
+            <button
+              className="check-for-author-btn"
+              onClick={e => {
+                const params = { author };
+                this.props.filterBySelectedFilter(params);
+              }}
+            >
+              Check for Author
+            </button>
           </ul>
         )}
       </div>
     );
   }
+
+  authorInput = e => {
+    this.setState({ author: e.target.value });
+  };
 
   showFilters = bool => {
     this.setState({ showFilters: bool });
