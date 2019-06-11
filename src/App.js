@@ -47,7 +47,7 @@ class App extends Component {
     return (
       <div className="grid-container">
         <Header
-          user={this.state.user}
+          user={user}
           userLogedIn={this.state.userLogedIn}
           logOutUser={this.logOutUser}
         />
@@ -63,7 +63,7 @@ class App extends Component {
             path="/login"
           />
           <SignUpPage updateAppUser={this.updateAppUser} path="/sign-up" />
-          <ProfilePage path="/profile" />
+          <ProfilePage user={user} path="/profile" />
         </Router>
       </div>
     );
