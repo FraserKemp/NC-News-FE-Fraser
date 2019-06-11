@@ -21,6 +21,21 @@ class ProfilePage extends Component {
     }
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.user !== this.props.user) {
+      getArticles({ author: this.props.user.username })
+        .then(({ articles, total_count }) => {
+          this.setState({ usersArticles: articles, total_count });
+        })
+        .catch(({ response }) => {
+          const errStatus = response.status;
+          const errMessage = response.data.msg;
+          const err = { errStatus, errMessage };
+          this.setState({ err });
+        });
+    }
+  }
+
   render() {
     const { user } = this.props;
     const { usersArticles } = this.state;
