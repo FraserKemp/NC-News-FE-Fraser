@@ -8,6 +8,7 @@ import SingleTopic from './Topics components/SingleTopic';
 import LoginPage from './Login-out components/LoginPage';
 import SignUpPage from './Login-out components/SignUpPage';
 import Error from './Error Component/Error';
+import ProfilePage from './Profile page components/ProfilePage';
 import './App.css';
 
 class App extends Component {
@@ -62,6 +63,7 @@ class App extends Component {
             path="/login"
           />
           <SignUpPage updateAppUser={this.updateAppUser} path="/sign-up" />
+          <ProfilePage path="/profile" />
         </Router>
       </div>
     );

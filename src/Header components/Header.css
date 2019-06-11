@@ -22,7 +22,7 @@ h4 {
   background-color: #bdc3c7;
 }
 
-#navbar-element {
+.navbar-element {
   float: left;
   display: inline;
   display: block;
@@ -34,13 +34,13 @@ h4 {
   border-right: 1px solid #bbb;
 }
 
-#navbar-element:hover {
+.navbar-element:hover {
   transition: 0.8s;
   color: white;
   background-color: #e74c3c;
 }
 
-#last-navbar-element {
+.last-navbar-element {
   float: right;
   display: right;
   display: block;
@@ -52,6 +52,6 @@ h4 {
   border-right: 1px solid #bbb;
 }
 
-#first-letter {
+.first-letter {
   color: #e74c3c;
 }

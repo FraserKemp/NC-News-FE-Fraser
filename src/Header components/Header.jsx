@@ -7,30 +7,34 @@ const Header = props => {
   return (
     <div className="header">
       <nav className="navbar">
-        <Link to="/" id="navbar-element">
+        <Link to="/" className="navbar-element">
           <h4>Articles</h4>
         </Link>
-        <Link to="/topics" id="navbar-element">
+        <Link to="/topics" className="navbar-element">
           <h4>Topics</h4>
         </Link>
-        <div id="last-navbar-element">
+        <div className="last-navbar-element">
           {!user && (
             <>
-              <Link to="/login" id="navbar-element">
+              <Link to="/login" className="navbar-element">
                 <h4>Login</h4>
               </Link>
-              <Link to="/sign-up" id="navbar-element">
+              <Link to="/sign-up" className="navbar-element">
                 <h4>Sign Up</h4>
               </Link>
             </>
           )}
           {user && (
-            <div id="navbar-element">
+            <Link to="/profile" className="navbar-element">
               <h4>{user.username}</h4>
-            </div>
+            </Link>
           )}
           {user && (
-            <Link onClick={e => logOutUser(false)} to="/" id="navbar-element">
+            <Link
+              onClick={e => logOutUser(false)}
+              to="/"
+              className="navbar-element"
+            >
               <h4>Logout</h4>
             </Link>
           )}
@@ -38,8 +42,8 @@ const Header = props => {
       </nav>
       <Link to="/">
         <h1>
-          <span id="first-letter">N</span>orthcoders
-          <span id="first-letter">N</span>ews
+          <span className="first-letter">N</span>orthcoders
+          <span className="first-letter">N</span>ews
         </h1>
       </Link>
     </div>
