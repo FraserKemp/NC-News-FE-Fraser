@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import { getUserByUsername } from '../api';
-import Error from '../Error Component/Error';
-import '@fortawesome/fontawesome-free/css/all.css';
-import './Login.css';
+import React, { Component } from "react";
+import { getUserByUsername } from "../api";
+import Error from "../Error Component/Error";
+import "@fortawesome/fontawesome-free/css/all.css";
+import "./Login.css";
 
 class LoginPage extends Component {
   state = {
     userInput: null,
+    guestUser: null,
     err: null
   };
 
@@ -31,7 +32,7 @@ class LoginPage extends Component {
   };
 
   render() {
-    const { err } = this.state;
+    const { err, guestUser } = this.state;
     if (err) {
       return <Error err={err} />;
     }
@@ -54,13 +55,10 @@ class LoginPage extends Component {
         </form>
         <button
           onClick={() => {
-            const user = {
-              username: 'Guest',
-              name: 'guest',
-              avatar_url:
-                'https://www.shareicon.net/data/2015/08/15/85434_guest_512x512.png'
-            };
-            this.props.logInGuest(user);
+            getUserByUsername("Guest").then(user => {
+              this.setState({ guestUser: user });
+            });
+            this.props.logInGuest(guestUser);
           }}
           className="btn"
         >
