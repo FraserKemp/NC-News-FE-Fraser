@@ -1,20 +1,20 @@
-import React, { Component } from 'react';
-import ArticleList from './ArticlesList';
-import './ArticlesPage.css';
-import { navigate } from '@reach/router';
-import { getArticles, getTopics, postNewArticle } from '../api';
-import ArticlePostForm from '../Form components/ArticlePostForm';
-import FilterButton from '../Filter button component/FilterButton';
-import '@fortawesome/fontawesome-free/css/all.css';
-import Error from '../Error Component/Error';
+import React, { Component } from "react";
+import ArticleList from "./ArticlesList";
+import "./ArticlesPage.css";
+import { navigate } from "@reach/router";
+import { getArticles, getTopics, postNewArticle } from "../api";
+import ArticlePostForm from "../Form components/ArticlePostForm";
+import FilterButton from "../Filter button component/FilterButton";
+import "@fortawesome/fontawesome-free/css/all.css";
+import Error from "../Error Component/Error";
 
 class ArticlesPage extends Component {
   state = {
     articles: [],
     topics: [],
-    created_at: 'created_at',
-    comment_count: 'comment_count',
-    votes: 'votes',
+    created_at: "created_at",
+    comment_count: "comment_count",
+    votes: "votes",
     button: false,
     page: 1,
     total_count: null,
@@ -74,7 +74,7 @@ class ArticlesPage extends Component {
             className="post-article-btn"
             onClick={() => this.showNewArticleForm(button)}
           >
-            Wrtite an Article{' '}
+            Wrtite an Article{" "}
             <span role="img" aria-label="hand-writing">
               ✍🏻
             </span>
@@ -97,6 +97,7 @@ class ArticlesPage extends Component {
             {articles.map(article => {
               return (
                 <ArticleList
+                  className="article-list"
                   key={`article${article.article_id}`}
                   article={article}
                 />

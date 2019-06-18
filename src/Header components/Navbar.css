@@ -43,10 +43,6 @@ a {
   padding-right: 20px;
 }
 
-.toolbar-items li.spacer {
-  padding-left: 45em;
-}
-
 .toolbar-items li.spacer:hover {
   transition: 0.8s;
   background-color: #bdc3c7;
@@ -69,46 +65,3 @@ a {
     display: none;
   }
 }
-
-/* 
-.navbar {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #bdc3c7;
-}
-
-.navbar-element {
-  float: left;
-  display: inline;
-  display: block;
-  color: black;
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-decoration: none;
-  border-right: 1px solid #bbb;
-}
-
-.navbar-element:hover {
-  transition: 0.8s;
-  color: white;
-  background-color: #e74c3c;
-}
-
-.last-navbar-element {
-  float: right;
-  display: right;
-  display: block;
-  color: black;
-  text-align: center;
-  padding-left: 10px;
-  padding-right: 10px;
-  text-decoration: none;
-  border-right: 1px solid #bbb;
-}
-
-.first-letter {
-  color: #e74c3c;
-} */

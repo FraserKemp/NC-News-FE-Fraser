@@ -47,6 +47,7 @@ class App extends Component {
     return (
       <div className="grid-container">
         <Header
+          className="header"
           user={user}
           userLogedIn={this.state.userLogedIn}
           logOutUser={this.logOutUser}

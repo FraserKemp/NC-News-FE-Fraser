@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { getTopicByName, getArticles } from '../api';
-import ArticleList from '../Articles components/ArticlesList';
-import Error from '../Error Component/Error';
-import './SingleTopic.css';
+import React, { Component } from "react";
+import { getTopicByName, getArticles } from "../api";
+import ArticleList from "../Articles components/ArticlesList";
+import Error from "../Error Component/Error";
+import "./SingleTopic.css";
 
 export default class SingleTopic extends Component {
   state = {
@@ -12,7 +12,6 @@ export default class SingleTopic extends Component {
   };
 
   componentDidMount() {
-    console.log('mounted ... ');
     const { topicName } = this.props;
     getTopicByName(topicName)
       .then(topic => {

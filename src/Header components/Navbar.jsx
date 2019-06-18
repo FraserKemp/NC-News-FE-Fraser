@@ -23,7 +23,6 @@ const Navbar = props => {
                 <h4>Topics</h4>
               </Link>
             </li>
-            <li className="spacer" />
             {!user && (
               <>
                 <li>
@@ -64,45 +63,3 @@ const Navbar = props => {
 };
 
 export default Navbar;
-
-/* <div>
-      <div className="toggle">
-        <div className="bars">
-          <i class="fas fa-bars" aria-hidden="true" />
-        </div>
-      </div>
-      <div className="ul">
-        <Link to="/" className="navbar-element">
-          <h4>Articles</h4>
-        </Link>
-        <Link to="/topics" className="navbar-element">
-          <h4>Topics</h4>
-        </Link>
-        <div className="last-navbar-element">
-          {!user && (
-            <>
-              <Link to="/login" className="navbar-element">
-                <h4>Login</h4>
-              </Link>
-              <Link to="/sign-up" className="navbar-element">
-                <h4>Sign Up</h4>
-              </Link>
-            </>
-          )}
-          {user && (
-            <Link to="/profile" className="navbar-element">
-              <h4>{user.username}</h4>
-            </Link>
-          )}
-          {user && (
-            <Link
-              onClick={e => logOutUser(false)}
-              to="/"
-              className="navbar-element"
-            >
-              <h4>Logout</h4>
-            </Link>
-          )}
-        </div>
-      </div>
-    </div> */

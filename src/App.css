@@ -3,8 +3,8 @@
   grid-template-columns: auto;
   grid-template-rows: auto;
   grid-template-areas:
-    'hd '
-    'main';
+    "hd "
+    "main";
   text-align: center;
 }
 
@@ -27,6 +27,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.header {
+  z-index: 200;
 }
 
 @keyframes App-logo-spin {
