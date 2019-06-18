@@ -21,16 +21,34 @@ const SideDrawer = props => {
             <h4 className="navbar-text">Topics</h4>
           </Link>
         </li>
-        <li>
-          <Link to="/login">
-            <h4 className="navbar-text">Login</h4>
-          </Link>
-        </li>
-        <li>
-          <Link onClick={e => logOutUser(false)} to="/">
-            <h4 className="navbar-text">Logout</h4>
-          </Link>
-        </li>
+        {!user && (
+          <>
+            <li>
+              <Link to="/login">
+                <h4 className="navbar-text">Login</h4>
+              </Link>
+            </li>
+            <li>
+              <Link to="/sign-up">
+                <h4 className="navbar-text">Sign Up</h4>
+              </Link>
+            </li>
+          </>
+        )}
+        {user && (
+          <>
+            <li>
+              <Link to="/profile">
+                <h4 className="navbar-text">{user.username}</h4>
+              </Link>
+            </li>
+            <li>
+              <Link onClick={e => logOutUser(false)} to="/">
+                <h4 className="navbar-text">Logout</h4>
+              </Link>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );

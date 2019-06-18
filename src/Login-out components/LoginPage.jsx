@@ -11,6 +11,12 @@ class LoginPage extends Component {
     err: null
   };
 
+  componentDidMount() {
+    getUserByUsername("Guest").then(user => {
+      this.setState({ guestUser: user });
+    });
+  }
+
   updateUserInput = e => {
     this.setState({ userInput: e.target.value });
   };
@@ -55,9 +61,6 @@ class LoginPage extends Component {
         </form>
         <button
           onClick={() => {
-            getUserByUsername("Guest").then(user => {
-              this.setState({ guestUser: user });
-            });
             this.props.logInGuest(guestUser);
           }}
           className="btn"

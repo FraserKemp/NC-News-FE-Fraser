@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import { Router, navigate } from '@reach/router';
-import Header from './Header components/Header';
-import ArticlesPage from './Articles components/ArticlesPage';
-import TopicsPage from './Topics components/TopicsPage';
-import SingleArticle from './Articles components/SingleArticle';
-import SingleTopic from './Topics components/SingleTopic';
-import LoginPage from './Login-out components/LoginPage';
-import SignUpPage from './Login-out components/SignUpPage';
-import Error from './Error Component/Error';
-import ProfilePage from './Profile page components/ProfilePage';
-import './App.css';
+import React, { Component } from "react";
+import { Router, navigate } from "@reach/router";
+import Header from "./Header components/Header";
+import ArticlesPage from "./Articles components/ArticlesPage";
+import TopicsPage from "./Topics components/TopicsPage";
+import SingleArticle from "./Articles components/SingleArticle";
+import SingleTopic from "./Topics components/SingleTopic";
+import LoginPage from "./Login-out components/LoginPage";
+import SignUpPage from "./Login-out components/SignUpPage";
+import Error from "./Error Component/Error";
+import ProfilePage from "./Profile page components/ProfilePage";
+import "./App.css";
 
 class App extends Component {
   state = {
@@ -17,8 +17,8 @@ class App extends Component {
   };
 
   componentDidMount() {
-    if (localStorage.hasOwnProperty('user')) {
-      let value = localStorage.getItem('user');
+    if (localStorage.hasOwnProperty("user")) {
+      let value = localStorage.getItem("user");
 
       value = JSON.parse(value);
       this.setState({ user: value });
@@ -26,20 +26,20 @@ class App extends Component {
   }
 
   logInGuest = user => {
-    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem("user", JSON.stringify(user));
     this.setState({ user });
     navigate(`/`);
   };
 
   updateAppUser = user => {
     this.setState({ user });
-    localStorage.setItem('user', JSON.stringify(user));
+    localStorage.setItem("user", JSON.stringify(user));
     navigate(`/`);
   };
 
   logOutUser = bool => {
     this.setState({ user: null, userLogedIn: bool });
-    localStorage.removeItem('user');
+    localStorage.removeItem("user");
   };
 
   render() {
