@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { getArticles } from '../api';
-import ArticleList from '../Articles components/ArticlesList';
+import React, { Component } from "react";
+import { getArticles } from "../api";
+import ArticleList from "../Articles components/ArticlesList";
 
 class ProfilePage extends Component {
   state = { usersArticles: null, total_count: null };
@@ -22,7 +22,8 @@ class ProfilePage extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.user !== this.props.user) {
+    const { user } = this.props;
+    if (user && prevProps.user !== this.props.user) {
       getArticles({ author: this.props.user.username })
         .then(({ articles, total_count }) => {
           this.setState({ usersArticles: articles, total_count });

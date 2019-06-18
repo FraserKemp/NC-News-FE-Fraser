@@ -10,6 +10,8 @@ There is a Guest user on sign in for users that may not want to sign up.
 
 ---
 
+---
+
 ## Installation
 
 Prerequisites:
@@ -45,10 +47,11 @@ npm start
 
 ---
 
-##Built with
+## Built with
 
 - React.js
 - Axios.js
 
-##Built By
+## Built By
+
 Fraser Kemp
