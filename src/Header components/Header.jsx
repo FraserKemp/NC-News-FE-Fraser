@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "@reach/router";
 import Navbar from "./Navbar";
-import SideDrawer from "../Header components/SideDrawer/SideDrawer";
+import SideDrawer from "../SideDrawer/SideDrawer";
 import BackDrop from "../BackDrop/BackDrop";
 import "./Header.css";
 

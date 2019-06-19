@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
-import DrawerToggleButton from "./SideDrawer/DrawerToggleButton";
+import DrawerToggleButton from "../SideDrawer/DrawerToggleButton";
 import "./Navbar.css";
 
 const Navbar = props => {
