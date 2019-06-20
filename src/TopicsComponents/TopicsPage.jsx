@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import GetTopics from './TopicsList';
-import { getTopics, postNewTopic, updateTopicsState } from '../api';
-import Error from '../Error Component/Error';
-import './TopicsPage.css';
+import React, { Component } from "react";
+import GetTopics from "./TopicsList";
+import { getTopics, postNewTopic, updateTopicsState } from "../api";
+import Error from "../ErrorComponent/Error";
+import "./TopicsPage.css";
 
 class TopicsPage extends Component {
   state = {
@@ -60,7 +60,7 @@ class TopicsPage extends Component {
                 <div id="textbox">
                   <input
                     required={true}
-                    onChange={e => this.handleChange('slug', e)}
+                    onChange={e => this.handleChange("slug", e)}
                     type="text"
                     name="slug"
                     placeholder="Topic name"
@@ -72,7 +72,7 @@ class TopicsPage extends Component {
                 <div id="textbox">
                   <input
                     required={true}
-                    onChange={e => this.handleChange('description', e)}
+                    onChange={e => this.handleChange("description", e)}
                     type="text"
                     name="description"
                     placeholder="Description"

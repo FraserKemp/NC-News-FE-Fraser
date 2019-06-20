@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { getTopicByName, getArticles } from "../api";
-import ArticleList from "../Articles components/ArticlesList";
-import Error from "../Error Component/Error";
+import ArticleList from "../ArticlesComponents/ArticlesList";
+import Error from "../ErrorComponent/Error";
 import "./SingleTopic.css";
 
 export default class SingleTopic extends Component {

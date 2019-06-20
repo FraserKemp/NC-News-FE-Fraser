@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { getUserByUsername } from "../api";
-import Error from "../Error Component/Error";
+import Error from "../ErrorComponent/Error";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./Login.css";
 

@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { postUser } from '../api';
-import './Sign-up.css';
-import Error from '../Error Component/Error';
-import '@fortawesome/fontawesome-free/css/all.css';
+import React, { Component } from "react";
+import { postUser } from "../api";
+import "./Sign-up.css";
+import Error from "../ErrorComponent/Error";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 export default class SignUpPage extends Component {
   state = { username: null, name: null, avatar_url: null };
@@ -20,7 +20,7 @@ export default class SignUpPage extends Component {
               <i className="far fa-user" />
               <input
                 required={true}
-                onChange={e => this.handleChange('username', e)}
+                onChange={e => this.handleChange("username", e)}
                 type="text"
                 placeholder="Username"
               />
@@ -30,7 +30,7 @@ export default class SignUpPage extends Component {
             <div id="sign-up-textbox">
               <input
                 required={true}
-                onChange={e => this.handleChange('name', e)}
+                onChange={e => this.handleChange("name", e)}
                 type="text"
                 placeholder="Name"
               />
@@ -40,7 +40,7 @@ export default class SignUpPage extends Component {
             <div id="sign-up-textbox">
               <input
                 required={true}
-                onChange={e => this.handleChange('avatar_url', e)}
+                onChange={e => this.handleChange("avatar_url", e)}
                 type="text"
                 placeholder="Avatar_Url"
               />

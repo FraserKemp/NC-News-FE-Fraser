@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import {
   getArticleById,
   getCommentsByArticleId,
   patchArticle,
   postCommentByArticleId
-} from '../api';
-import Error from '../Error Component/Error';
-import CommentList from '../Comment components/CommentList';
-import '@fortawesome/fontawesome-free/css/all.css';
-import './SingleArticle.css';
+} from "../api";
+import Error from "../Error Component/Error";
+import CommentList from "../CommentComponents/CommentList";
+import "@fortawesome/fontawesome-free/css/all.css";
+import "./SingleArticle.css";
 
 class SingleArticle extends Component {
   state = {
@@ -16,7 +16,7 @@ class SingleArticle extends Component {
     comments: [],
     voteChange: 0,
     button: false,
-    commentBody: '',
+    commentBody: "",
     err: null
   };
 

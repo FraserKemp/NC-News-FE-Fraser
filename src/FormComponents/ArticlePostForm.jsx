@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import GetTopicOptions from '../Topics components/TopicOptions';
-import './ArticlePostForm.css';
+import React, { Component } from "react";
+import GetTopicOptions from "../TopicsComponents/TopicOptions";
+import "./ArticlePostForm.css";
 
 export default class ArticlePostForm extends Component {
   state = {

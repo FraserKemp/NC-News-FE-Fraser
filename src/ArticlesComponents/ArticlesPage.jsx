@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React, { Component } from "./node_modules/react";
 import ArticleList from "./ArticlesList";
 import "./ArticlesPage.css";
-import { navigate } from "@reach/router";
+import { navigate } from "./node_modules/@reach/router";
 import { getArticles, getTopics, postNewArticle } from "../api";
-import ArticlePostForm from "../Form components/ArticlePostForm";
-import FilterButton from "../Filter button component/FilterButton";
-import "@fortawesome/fontawesome-free/css/all.css";
-import Error from "../Error Component/Error";
+import ArticlePostForm from "../FormComponents/ArticlePostForm";
+import FilterButton from "../FilterButtonComponent/FilterButton";
+import "./node_modules/@fortawesome/fontawesome-free/css/all.css";
+import Error from "../ErrorComponent/Error";
 
 class ArticlesPage extends Component {
   state = {

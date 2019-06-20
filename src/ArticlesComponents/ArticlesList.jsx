@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "@reach/router";
+import React from "./node_modules/react";
+import { Link } from "./node_modules/@reach/router";
 import "./ArticleList.css";
-import moment from "moment";
+import moment from "./node_modules/moment";
 moment().format();
 
 const ArticleList = props => {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { getArticles } from "../api";
-import ArticleList from "../Articles components/ArticlesList";
+import ArticleList from "../ArticlesComponents/ArticlesList";
 
 class ProfilePage extends Component {
   state = { usersArticles: null, total_count: null };
