@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import GetTopics from "./TopicsList";
+import TopicList from "./TopicsList";
 import { getTopics, postNewTopic, updateTopicsState } from "../api";
 import Error from "../ErrorComponent/Error";
 import "./TopicsPage.css";
@@ -45,7 +45,7 @@ class TopicsPage extends Component {
       <div>
         <ul id="topics-container">
           {topics.map((topic, i) => {
-            return <GetTopics key={`topic${i}`} topic={topic} />;
+            return <TopicList key={`topic${i}`} topic={topic} />;
           })}
         </ul>
         {user && (

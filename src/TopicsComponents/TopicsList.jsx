@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from '@reach/router';
+import React from "react";
+import { Link } from "@reach/router";
 
-const GetTopics = props => {
+const TopicList = props => {
   const { topic } = props;
   return (
     <div id="topics-container-items">
@@ -13,4 +13,4 @@ const GetTopics = props => {
   );
 };
 
-export default GetTopics;
+export default TopicList;
