@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:100&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:100&display=swap");
 
 @media only screen and (max-width: 768px) {
   /* smartphones, portrait iPhone, portrait 480x320 phones (Android)*/
@@ -35,7 +35,7 @@
 }
 
 #topics-container-items::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   width: 100%;
@@ -49,10 +49,6 @@
 
 #topics-container-items:hover::before {
   height: 180%;
-}
-
-.new-topic-box {
-  width: 280px;
 }
 
 .login-box h1 {
@@ -95,7 +91,7 @@ button:focus {
   border-bottom: white;
   padding: 5px;
   font-size: 23px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   cursor: pointer;
   transition: 0.4s;
   margin: 12px 0;
@@ -123,7 +119,7 @@ button:focus {
   text-align: center;
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 #topics-container-items a {
@@ -133,4 +129,9 @@ button:focus {
 
 #topics-container-items a:hover {
   color: white;
+}
+
+.new-topic-box {
+  display: flex;
+  justify-content: center;
 }
