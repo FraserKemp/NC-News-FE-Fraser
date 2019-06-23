@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./Filter.css";
-import "../ArticlesComponents/node_modules/@fortawesome/fontawesome-free/css/all.css";
+import "@fortawesome/fontawesome-free/css/all.css";
 
 class FilterButton extends Component {
   state = { showFilters: null, author: "" };

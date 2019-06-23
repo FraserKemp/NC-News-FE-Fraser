@@ -5,10 +5,12 @@ import {
   patchArticle,
   postCommentByArticleId
 } from "../api";
-import Error from "../Error Component/Error";
+import Error from "../ErrorComponent/Error";
 import CommentList from "../CommentComponents/CommentList";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "./SingleArticle.css";
+import moment from "moment";
+moment().format();
 
 class SingleArticle extends Component {
   state = {
@@ -64,6 +66,7 @@ class SingleArticle extends Component {
     const { article, comments, voteChange, button } = this.state;
     const { user } = this.props;
     const { err } = this.state;
+    let timeAgo;
     if (err) {
       return <Error err={err} />;
     }
@@ -74,7 +77,8 @@ class SingleArticle extends Component {
             <h1 id="article-title">{article.title}</h1>
             <p>{article.body}</p>
             <h4>Author: {article.author}</h4>
-            <h4>Created at: {article.created_at}</h4>
+            {(timeAgo = moment(article.created_at).fromNow())}
+            <h4>Created at: {timeAgo}</h4>
             <h4>Likes: {article.votes + voteChange}</h4>
             <button
               disabled={voteChange === 1}

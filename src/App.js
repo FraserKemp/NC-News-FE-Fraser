@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import { Router, navigate } from "@reach/router";
-import Header from "./Header components/Header";
-import ArticlesPage from "./Articles components/ArticlesPage";
-import TopicsPage from "./Topics components/TopicsPage";
-import SingleArticle from "./Articles components/SingleArticle";
-import SingleTopic from "./Topics components/SingleTopic";
-import LoginPage from "./Login-out components/LoginPage";
-import SignUpPage from "./Login-out components/SignUpPage";
-import Error from "./Error Component/Error";
-import ProfilePage from "./Profile page components/ProfilePage";
+import Header from "./HeaderComponents/Header";
+import ArticlesPage from "./ArticlesComponents/ArticlesPage";
+import TopicsPage from "./TopicsComponents/TopicsPage";
+import SingleArticle from "./ArticlesComponents/SingleArticle";
+import SingleTopic from "./TopicsComponents/SingleTopic";
+import LoginPage from "./LoginOutComponents/LoginPage";
+import SignUpPage from "./LoginOutComponents/SignUpPage";
+import Error from "./ErrorComponent/Error";
+import ProfilePage from "./ProfilePageComponents/ProfilePage";
 import "./App.css";
 
 class App extends Component {
